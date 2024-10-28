@@ -1,11 +1,34 @@
-export default function Product ({name, imgUrl, price }) {
+import PropTypes from "prop-types";
 
-
-    return (
+const Product = ({name, tag, location, image, stats}) => (
+    <div>
         <div>
-            <h2>{name}</h2>
-            <img src={imgUrl} alt={name} width="480" />
-            <p>Price: {price} credits</p>
+            <img 
+            src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
+            alt="User avatar"
+            />
+            <p>Petra Marica</p>
+            <p>@pmarica</p>
+            <p>Salvador, Brasil</p>
         </div>
-    );
-};
+
+        <ul>
+            <li>
+                <span>Followers</span>
+                <span>1000</span>
+            </li>
+
+            <li>
+                <span>Views</span>
+                <span>2000</span>
+            </li>
+
+            <li>
+                <span>Likes</span>
+                <span>3000</span>
+            </li>
+        </ul>
+    </div>
+);
+
+export default Product;
